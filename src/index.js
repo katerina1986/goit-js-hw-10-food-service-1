@@ -15,10 +15,12 @@ function buildMenu(item) {
   return menuList.insertAdjacentHTML('beforeend', menuCard(item));
 }
 buildMenu(menu);
-// 123
+
 const input = document.querySelector('#theme-switch-toggle');
 checkBodyTheme.add(
-  localStorage.getItem('theme') === null ? Theme.LIGHT : localStorage.getItem('theme'),
+  localStorage.getItem('theme') === null
+    ? Theme.LIGHT
+    : localStorage.getItem('theme'),
 );
 if (checkBodyTheme.value === Theme.DARK) {
   input.checked = true;
